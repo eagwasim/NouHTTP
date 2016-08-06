@@ -27,6 +27,28 @@ Then add the dependency
  compile 'com.noubug.lib:nouhttp:[version]'
 ```
 
+### Usage
+
+```sh
+NouHTTP.with(this)
+    .get(Constant.BASE_URL + "/_vh/api/poll/get-poll-by-id/" + poll.getPollId())
+    .addHeader(tokenHeader, apiUser.getToken())
+    .inTheFuture((e, statusCode, result) -> {
+        Log.i("TAG", result == null ? "NO RESULT" : result);
+        if (e == null) {
+            try {
+                            
+                } catch (Exception e1) {
+                   1.printStackTrace();
+                }
+        } else {
+            e.printStackTrace();
+        }
+    }).nou();
+                
+```
+
+
 
 ### Development
 
