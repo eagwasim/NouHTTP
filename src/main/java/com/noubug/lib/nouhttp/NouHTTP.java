@@ -195,6 +195,9 @@ public class NouHTTP {
             }
 
             for (String key : this.params.keySet()) {
+                if (key.isEmpty()) {
+                    continue;
+                }
                 urlBuilder.append(key.trim());
                 urlBuilder.append("=");
                 urlBuilder.append(URLEncoder.encode(this.params.get(key), "UTF-8"));
@@ -218,6 +221,9 @@ public class NouHTTP {
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
 
             for (String header : this.headers.keySet()) {
+                if (header.isEmpty()) {
+                    continue;
+                }
                 con.setRequestProperty(header, this.headers.get(header));
             }
 
@@ -270,6 +276,13 @@ public class NouHTTP {
                 } else {
                     urlBody.append(GSON.toJson(body));
                 }
+            }
+
+            for (String header : this.headers.keySet()) {
+                if (header.isEmpty()) {
+                    continue;
+                }
+                con.setRequestProperty(header, this.headers.get(header));
             }
 
             String body = urlBody.toString();

@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/noubug/NouHTTP'
     gitUrl = 'https://github.com/noubug/NouHTTP.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.3'
 
     developerId = 'eagwasim'
     developerName = 'Agwasim Emmanuel'
