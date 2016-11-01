@@ -211,7 +211,7 @@ public class NouHTTP {
                 logInfo("Making Get url call to " + finalUrl);
             }
 
-            URL obj = new URL(url);
+            URL obj = new URL(finalUrl);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
             // optional default is GET
