@@ -3,7 +3,7 @@ NouHTTP is a minimalistic HTTP client for android capable of making post and get
 I wanted a simple http client for android and tried [ION] it kept failing on android 4.* < and some samsung devices
 so I thought to create a simple HttpUrlConnection wrapper. I hope you find it useful
 ### Version
-0.0.2
+0.0.4
 
 ### Tech
 
